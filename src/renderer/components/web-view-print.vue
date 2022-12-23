@@ -69,6 +69,7 @@ export default {
       const data = this.prints.shift();
       console.log("发送渲染数据", data.id, +new Date());
       setTimeout(async () => {
+        const webview = document.querySelector("#printWebview");
         const ret = await webview.print({
           silent: true,
           printBackground: true
